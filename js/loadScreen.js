@@ -15,4 +15,8 @@ export const loadScreen = async (screenName = "") => {
 
   // Get the view we want to display
   appScreen.innerHTML = await handler.getView();
+
+  if (typeof handler.postRender === "function") {
+    await handler.postRender();
+  }
 };

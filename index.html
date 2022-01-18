@@ -11,13 +11,21 @@
     document.documentElement.classList.add('js');
   </script>
 
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="stylesheet" href="/main.css">
 </head>
 
-<body>
-  <div id="app<">
+<body class="bg-stone-200 p-3">
+  <div id="app" class="bg-white p-5 max-w-3xl mr-auto ml-auto rounded-sm shadow">
     <noscript>JS required</noscript>
-    Loading ...
+    <h1 class="font-mono text-4xl">AppName</h1>
+    <ul class="font-bold my-2">
+      <li class="inline-block"><a href="/">Home</a></li>
+      <li class="inline-block"><a href="/posts">See Posts</a></li>
+      <li class="inline-block"><a href="/create">Create Posts</a></li>
+      <li class="inline-block"><a href="https://www.joshcanhelp.com">Josh</a></li>
+    </ul>
   </div>
   <script src="/js/app.js" type="module"></script>
 </body>

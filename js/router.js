@@ -1,3 +1,11 @@
 export const registerRouter = () => {
-  console.log("Router loading ...");
-};
+  document.querySelectorAll("a").forEach((el) => {
+    el.addEventListener("click", (event) => {
+      if (event.target.hostname !== window.location.hostname) {
+        return;
+      }
+
+      event.preventDefault();
+    });
+  });
+};  

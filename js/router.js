@@ -1,7 +1,7 @@
 import { loadScreen } from "./loadScreen.js";
 
 export const registerRouter = async () => {
-  await loadScreen();
+  await loadScreen(window.location.pathname);
   document.querySelectorAll("a").forEach((el) => {
     el.addEventListener("click", async (event) => {
       // Allow external links

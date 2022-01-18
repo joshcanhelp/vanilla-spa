@@ -19,10 +19,6 @@
     @apply inline-block py-1 px-6 bg-lime-600 hover:bg-lime-500 text-white rounded-sm
   }
 
-  nav a.active {
-    @apply hover:bg-lime-500
-  }
-
   section {
     @apply pt-6
   }
@@ -35,5 +31,14 @@
 
   .screen h2 {
     @apply text-2xl mb-3
+  }
+
+  .loading {
+    height: 4em;
+    opacity: 0.3;
+    background-image: url("/images/loading.gif");
+    background-position: center;
+    background-size: 2em;
+    background-repeat: no-repeat;
   }
 }

@@ -4,12 +4,20 @@ export const registerRouter = async () => {
   await loadScreen();
   document.querySelectorAll("a").forEach((el) => {
     el.addEventListener("click", async (event) => {
-      if (event.target.hostname === window.location.hostname) {
-        event.preventDefault();
-        const { pathname } = event.target;
-        window.history.pushState({}, '', pathname);
-        await loadScreen(pathname);
+      // Allow external links
+      if (event.target.hostname !== window.location.hostname) {
+        return;
       }
+
+      // Handle in-app
+      event.preventDefault();
+      const { pathname } = event.target;
+
+      // Change the URL
+      window.history.pushState({}, '', pathname);
+
+      // Load the UI
+      await loadScreen(pathname);
     });
   });
 };  

@@ -464,6 +464,10 @@ nav a:hover {
   background-color: rgb(132 204 22 / var(--tw-bg-opacity));
 }
 
+section {
+  padding-top: 1.5rem;
+}
+
 *, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -514,4 +518,10 @@ nav a:hover {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.screen h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }

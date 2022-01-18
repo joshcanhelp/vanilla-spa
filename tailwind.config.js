@@ -1,3 +1,6 @@
 module.exports = {
-  content: ["./**/*.html"],
+  content: [
+    "./index.html",
+    "./views/**/*.html"
+  ]
 }

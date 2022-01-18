@@ -4,15 +4,15 @@
 
 @layer base {
   body {
-    @apply bg-stone-200 p-3;
+    @apply bg-stone-200 p-3
   }
 
   main {
-    @apply bg-white p-5 max-w-3xl mr-auto ml-auto rounded-sm shadow;
+    @apply bg-white p-5 max-w-3xl mr-auto ml-auto rounded-sm shadow
   }
 
   nav {
-    @apply font-bold;
+    @apply font-bold
   }
 
   nav a {
@@ -22,10 +22,18 @@
   nav a.active {
     @apply hover:bg-lime-500
   }
+
+  section {
+    @apply pt-6
+  }
 }
 
 @layer components {
   .logo {
     @apply font-mono text-4xl mb-4;
+  }
+
+  .screen h2 {
+    @apply text-2xl mb-3
   }
 }

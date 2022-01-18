@@ -13,20 +13,19 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/css/main.dist.css">
 </head>
 
-<body class="bg-stone-200 p-3">
-  <div id="app" class="bg-white p-5 max-w-3xl mr-auto ml-auto rounded-sm shadow">
-    <noscript>JS required</noscript>
-    <h1 class="font-mono text-4xl">AppName</h1>
-    <ul class="font-bold my-2">
-      <li class="inline-block"><a href="/">Home</a></li>
-      <li class="inline-block"><a href="/posts">See Posts</a></li>
-      <li class="inline-block"><a href="/create">Create Posts</a></li>
-      <li class="inline-block"><a href="https://www.joshcanhelp.com">Josh</a></li>
-    </ul>
-  </div>
+<body>
+  <main id="app">
+    <h1 class="logo">AppName</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/posts">See Posts</a>
+      <a href="/create">Create Posts</a>
+    </nav>
+    <section id="app-screen"></section>
+  </main>
   <script src="/js/app.js" type="module"></script>
 </body>
 </html>

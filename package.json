@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx http-server --port 7000",
-    "tailwind": "tailwindcss -i ./css/main.css -o ./css/main.dist.css --watch",
+    "start": "npx http-server --port 7000 -P http://localhost:7000?",
+    "tailwind": "npx tailwindcss -i ./css/main.css -o ./css/main.dist.css --watch",
     "format": "prettier --write js/**/*.js"
   },
   "repository": {
@@ -15,5 +15,8 @@
   },
   "author": "Josh Cunningham <josh@joshcanhelp.com>",
   "license": "MIT",
-  "homepage": "https://github.com/joshcanhelp/vanilla-spa#readme"
+  "homepage": "https://github.com/joshcanhelp/vanilla-spa#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.15"
+  }
 }

@@ -2,43 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-stone-200 p-3
-  }
-
-  main {
-    @apply bg-white p-5 max-w-3xl mr-auto ml-auto rounded-sm shadow
-  }
-
-  nav {
-    @apply font-bold
-  }
-
-  nav a {
-    @apply inline-block py-1 px-6 bg-lime-600 hover:bg-lime-500 text-white rounded-sm
-  }
-
-  section {
-    @apply pt-6
-  }
+body {
+  @apply bg-stone-200 p-3 font-sans
 }
 
-@layer components {
-  .logo {
-    @apply font-mono text-4xl mb-4;
-  }
-
-  .screen h2 {
-    @apply text-2xl mb-3
-  }
-
-  .loading {
-    height: 4em;
-    opacity: 0.3;
-    background-image: url("/images/loading.gif");
-    background-position: center;
-    background-size: 2em;
-    background-repeat: no-repeat;
-  }
+main {
+  @apply bg-white p-5 max-w-3xl mr-auto ml-auto rounded-sm shadow
 }
+
+section {
+  @apply pt-6
+}
+
+hr {
+  @apply border-t-0 border-b border-slate-300 my-4
+}
+
+nav a {
+  @apply font-bold inline-block py-1 px-6 bg-lime-600 hover:bg-lime-500 text-white rounded
+}
+
+nav .active {
+  @apply bg-lime-500
+}
+
+.logo {
+  @apply font-mono text-4xl mb-4
+}
+
+.screen h2 {
+  @apply text-2xl mb-3
+}
+
+.loading {
+  height: 4em;
+  opacity: 0.3;
+  background-image: url("/images/loading.gif");
+  background-position: center;
+  background-size: 2em;
+  background-repeat: no-repeat;
+}
+

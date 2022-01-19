@@ -17,6 +17,7 @@
   "license": "MIT",
   "homepage": "https://github.com/joshcanhelp/vanilla-spa#readme",
   "devDependencies": {
+    "@tailwindcss/forms": "^0.4.0",
     "tailwindcss": "^3.0.15"
   }
 }

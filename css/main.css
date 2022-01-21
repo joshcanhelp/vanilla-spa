@@ -50,16 +50,22 @@ nav .active {
   @apply font-mono text-4xl mb-4
 }
 
+.screen {
+  @apply py-4
+}
+
 .screen h2 {
   @apply text-2xl mb-3
 }
 
 .loading {
-  height: 4em;
-  opacity: 0.3;
-  background-image: url("/images/loading.gif");
-  background-position: center;
-  background-size: 2em;
-  background-repeat: no-repeat;
+  @apply h-4 opacity-30 bg-center bg-contain bg-loader bg-no-repeat
 }
 
+.error {
+  @apply text-red-600 font-bold text-sm
+}
+
+.success {
+  @apply text-green-600 font-bold text-sm
+}

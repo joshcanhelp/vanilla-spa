@@ -634,6 +634,10 @@ select {
   --tw-backdrop-sepia:  ;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   --tw-bg-opacity: 1;
   background-color: rgb(231 229 228 / var(--tw-bg-opacity));
@@ -739,6 +743,11 @@ nav .active {
   line-height: 2.5rem;
 }
 
+.screen {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .screen h2 {
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
@@ -746,11 +755,26 @@ nav .active {
 }
 
 .loading {
-  height: 4em;
-  opacity: 0.3;
-  background-image: url("/images/loading.gif");
+  height: 1rem;
+  background-image: url('/images/loading.gif');
+  background-size: contain;
   background-position: center;
-  background-size: 2em;
   background-repeat: no-repeat;
+  opacity: 0.3;
 }
 
+.error {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.success {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}

@@ -1,4 +1,5 @@
 import { fetchView } from "../handlerUtilities.js";
+import { apiUrl } from "../constants.js";
 
 export const getTitle = () => "Your Posts";
 export const getView = async () => await fetchView("posts");
@@ -7,7 +8,7 @@ export const postRender = async () => {
 
   let postsJson;
   try {
-    const posts = await fetch("/posts.json");
+    const posts = await fetch(apiUrl);
     postsJson = (await posts.json()).posts;
   } catch (error) {
     postsList.classList.remove("loading");

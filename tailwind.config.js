@@ -4,7 +4,13 @@ module.exports = {
     "./views/**/*.html",
     "./js/**/*.js"
   ],
-  theme: {},
+  theme: {
+    extend: {
+      backgroundImage: {
+        'loader': "url('/images/loading.gif')",
+      }
+    }
+  },
   plugins: [
     require('@tailwindcss/forms')
   ]

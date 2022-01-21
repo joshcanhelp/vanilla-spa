@@ -15,9 +15,12 @@ export const postRender = async () => {
     postsList.innerHTML = "❌ Error fetching posts.";
     return;
   }
-  
+
   postsList.classList.remove("loading");
-  postsList.innerHTML = "<ul>" + postsJson.reduce((acc, el) => {
-    return `<li><strong>${el.title}</strong> - ${el.published}</li>${acc}`;
-  }, "") + "</ul>";
-}
+  postsList.innerHTML =
+    "<ul>" +
+    postsJson.reduce((acc, el) => {
+      return `<li><strong>${el.title}</strong> - ${el.published}</li>${acc}`;
+    }, "") +
+    "</ul>";
+};

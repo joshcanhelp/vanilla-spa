@@ -1,7 +1,7 @@
 import { fetchView } from "../handlerUtilities.js";
 import { apiUrl } from "../constants.js";
 
-export const getTitle = () => "Your Posts";
+export const metaTitle = "Your Posts";
 export const getView = async () => await fetchView("posts");
 export const postRender = async () => {
   const postsList = document.getElementById("posts-list");

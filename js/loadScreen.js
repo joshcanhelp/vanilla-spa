@@ -7,13 +7,30 @@ export const loadScreen = async (pathname = "") => {
   // Clear out existing screen content
   appScreen.innerHTML = "";
 
-  // Set the screen to home if path is empty
-  const screenName = pathname.slice(1) || "home";
+  // Set navigation menu active
+  document.querySelectorAll("nav a").forEach((el) => {
+    el.classList.remove("active");
+    if (el.getAttribute("href") === pathname) {
+      el.classList.add("active");
+    }
+  });
 
-  const { getTitle, getView, postRender } = await import(`./handlers/${screenName}.js`);
+  const { 
+    metaTitle, 
+    getView, 
+    postRender,
+    requiresAuth
+  } = await import(`./handlers/${pathname.slice(1) || "home"}.js`);
 
   // Set the page title or a default
-  pageTitle.text = getTitle() + " | AppName";
+  pageTitle.text = metaTitle + " | AppName";
+
+  // Check if the page requires authentication
+  if (requiresAuth) {
+    appScreen.classList.remove("loading");
+    appScreen.innerHTML = "Login required";
+    return;
+  }
 
   // Get the view we want to display
   appScreen.innerHTML = await getView();
@@ -23,12 +40,4 @@ export const loadScreen = async (pathname = "") => {
   if (typeof postRender === "function") {
     await postRender();
   }
-
-  document.querySelectorAll("nav a").forEach((el) => {
-    if (el.getAttribute("href") === pathname) {
-      el.classList.add("active");
-    } else {
-      el.classList.remove("active");
-    }
-  });
 };

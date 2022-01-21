@@ -1,7 +1,8 @@
 import { fetchView } from "../handlerUtilities.js";
 import { apiUrl } from "../constants.js";
 
-export const getTitle = () => "Create Post";
+export const requiresAuth = true;
+export const metaTitle = "Create Post";
 export const getView = async () => await fetchView("create");
 export const postRender = async () => {
   const form = document.getElementById("create-form");

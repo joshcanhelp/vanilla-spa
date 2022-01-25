@@ -34,7 +34,7 @@ label {
   @apply block rounded-sm border-slate-300 w-full
 }
 
-[type='submit'] {
+[type='submit'], .button {
   @apply font-bold inline-block py-1 px-6 bg-cyan-600 hover:bg-cyan-500 text-white rounded-full cursor-pointer
 }
 

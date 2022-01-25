@@ -692,7 +692,7 @@ label {
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
 }
 
-[type='submit'] {
+[type='submit'], .button {
   display: inline-block;
   cursor: pointer;
   border-radius: 9999px;
@@ -707,7 +707,7 @@ label {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-[type='submit']:hover {
+[type='submit']:hover, .button:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(6 182 212 / var(--tw-bg-opacity));
 }

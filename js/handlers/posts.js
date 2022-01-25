@@ -6,20 +6,27 @@ export const getView = async () => await fetchView("posts");
 export const postRender = async () => {
   const postsList = document.getElementById("posts-list");
 
-  let postsJson;
+  let response;
   try {
-    const posts = await fetch(apiUrl);
-    postsJson = (await posts.json()).posts;
+    response = await fetch(apiUrl);
   } catch (error) {
     postsList.classList.remove("loading");
-    postsList.innerHTML = "❌ Error fetching posts.";
+    postsList.innerHTML = `❌ Error fetching posts: ${error.message}`;
     return;
   }
+
+  if (!response.ok) {
+    postsList.classList.remove("loading");
+    postsList.innerHTML = `❌ Error fetching posts: ${response.statusText}`;
+    return;
+  }
+
+  const responseBody = await response.json();
 
   postsList.classList.remove("loading");
   postsList.innerHTML =
     "<ul>" +
-    postsJson.reduce((acc, el) => {
+    responseBody.posts.reduce((acc, el) => {
       return `<li><strong>${el.title}</strong> - ${el.published}</li>${acc}`;
     }, "") +
     "</ul>";

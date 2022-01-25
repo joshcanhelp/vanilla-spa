@@ -27,8 +27,8 @@ export const loadScreen = async (pathname = "") => {
 
   // Check if the page requires authentication
   if (requiresAuth) {
-    appScreen.classList.remove("loading");
-    appScreen.innerHTML = "Login required";
+    localStorage.setItem("returnTo", pathname);
+    window.location.href = "/login";
     return;
   }
 

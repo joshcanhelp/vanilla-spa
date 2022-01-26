@@ -679,6 +679,15 @@ form {
   max-width: 32rem;
 }
 
+pre {
+  overflow: scroll;
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 label {
   display: block;
   font-weight: 700;

@@ -26,6 +26,10 @@ form {
   @apply max-w-lg
 }
 
+pre {
+  @apply bg-slate-100 p-3 text-xs overflow-scroll
+}
+
 label {
   @apply block font-bold
 }

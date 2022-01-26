@@ -25,7 +25,7 @@ export const postRender = async () => {
     const formData = {
       title: document.getElementById("title").value,
       content: document.getElementById("content").value,
-      author: document.getElementById("author").value,
+      author: localStorage.getItem("sub"),
     };
 
     let response;
@@ -43,9 +43,11 @@ export const postRender = async () => {
       return;
     }
 
+    const responseBody = await response.json();
+
     if (!response.ok) {
       resetForm();
-      formErrors.textContent = `${response.statusText}`;
+      formErrors.textContent = `${response.statusText}: ${responseBody.error}`;
       return;
     }
 

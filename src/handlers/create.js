@@ -1,7 +1,6 @@
 import { fetchView } from "../handlerUtilities.js";
 import { apiUrl } from "../constants.js";
 
-
 export const metaTitle = "Create Post";
 export const getView = async () => await fetchView("create");
 export const postRender = async () => {
@@ -13,7 +12,7 @@ export const postRender = async () => {
   const resetForm = () => {
     formSubmit.disabled = false;
     form.style.opacity = 1;
-  }
+  };
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();

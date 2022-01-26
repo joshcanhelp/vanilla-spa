@@ -5,7 +5,7 @@ export const registerRouter = async () => {
   document.querySelectorAll("a").forEach((el) => {
     el.addEventListener("click", async (event) => {
       // Allow external links
-      if (event.target.hostname !== window.location.hostname) {
+      if (event.target.origin !== window.location.origin) {
         return;
       }
 

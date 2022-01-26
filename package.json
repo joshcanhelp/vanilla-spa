@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx http-server --port 7000 -P http://localhost:7000?",
     "tailwind": "npx tailwindcss -i ./css/main.css -o ./css/main.dist.css --watch",
-    "format": "prettier --write src/**/*.js"
+    "format": "prettier --write src/**/*.js",
+    "build": "webpack --watch --progress"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   "homepage": "https://github.com/joshcanhelp/vanilla-spa#readme",
   "devDependencies": {
     "@tailwindcss/forms": "^0.4.0",
-    "tailwindcss": "^3.0.15"
+    "tailwindcss": "^3.0.15",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.2"
   }
 }

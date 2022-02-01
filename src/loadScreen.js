@@ -1,3 +1,5 @@
+import { isAuthenticated } from "./helpers.js";
+
 const appScreen = document.getElementById("app-screen");
 const pageTitle = document.getElementsByTagName("title")[0];
 
@@ -26,7 +28,7 @@ export const loadScreen = async (pathname = "") => {
   pageTitle.text = metaTitle + " | AppName";
 
   // Check if the page requires authentication
-  if (requiresAuth) {
+  if (requiresAuth && !isAuthenticated()) {
     localStorage.setItem("returnTo", pathname);
     window.location.href = "/login";
     return;

@@ -25,6 +25,10 @@ export const convertVerifierToChallenge = async (value) => {
     .replaceAll("=", "");
 };
 
+export const isAuthenticated = () => {
+  return false;
+};
+
 const stringToArrayBuffer = (string) => {
   return new TextEncoder().encode(string);
 };

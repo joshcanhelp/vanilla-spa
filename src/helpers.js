@@ -1,15 +1,5 @@
 export const nowInSeconds = () => Math.floor(Date.now() / 1000);
 
-export const getUrlParams = () => {
-  const urlQuery = window.location.search.replace(/^(\?)/, "").split("&");
-  const urlParms = {};
-  urlQuery.forEach((element) => {
-    const paramParts = element.split("=");
-    urlParms[paramParts[0]] = paramParts[1];
-  });
-  return urlParms;
-};
-
 export const getRandomString = () => {
   return crypto.getRandomValues(new Uint8Array(24)).join("");
 };

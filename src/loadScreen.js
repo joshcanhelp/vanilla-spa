@@ -17,12 +17,9 @@ export const loadScreen = async (pathname = "") => {
     }
   });
 
-  const { 
-    metaTitle, 
-    getView, 
-    postRender,
-    requiresAuth
-  } = await import(`./handlers/${pathname.slice(1) || "home"}.js`);
+  const { metaTitle, getView, postRender, requiresAuth } = await import(
+    `./handlers/${pathname.slice(1) || "home"}.js`
+  );
 
   // Set the page title or a default
   pageTitle.text = metaTitle + " | AppName";
@@ -36,7 +33,7 @@ export const loadScreen = async (pathname = "") => {
 
   // Get the view we want to display
   appScreen.innerHTML = await getView();
-  
+
   appScreen.classList.remove("loading");
 
   if (typeof postRender === "function") {

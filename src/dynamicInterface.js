@@ -7,6 +7,9 @@ export const loadDynamicInterface = async () => {
     const logoutLink = document.createElement("a");
     logoutLink.textContent = "Logout";
     logoutLink.setAttribute("href", "/logout");
-    appScreen.prepend(`You're logged in as ${localStorage.getItem("name")} - `, logoutLink);
+    appScreen.prepend(
+      `You're logged in as ${localStorage.getItem("name")} - `,
+      logoutLink
+    );
   }
 };

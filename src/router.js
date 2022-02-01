@@ -14,10 +14,10 @@ export const registerRouter = async () => {
       const { pathname } = event.target;
 
       // Change the URL
-      window.history.pushState({}, '', pathname);
+      window.history.pushState({}, "", pathname);
 
       // Load the UI
       await loadScreen(pathname);
     });
   });
-};  
+};

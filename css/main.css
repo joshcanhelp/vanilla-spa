@@ -77,3 +77,11 @@ nav .active {
 .success {
   @apply text-green-600 font-bold text-sm
 }
+
+.sub-nav {
+  @apply text-sm text-slate-500 pt-2 pb-4
+}
+
+.sub-nav a {
+  @apply underline
+}

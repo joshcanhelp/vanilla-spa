@@ -3,8 +3,8 @@ import { loadDynamicInterface } from "./dynamicInterface.js";
 
 const app = async () => {
   console.log("App loading ...");
-  registerRouter();
-  loadDynamicInterface();
+  await registerRouter();
+  await loadDynamicInterface();
 };
 
 document.addEventListener("DOMContentLoaded", app);
